@@ -6,7 +6,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+
 import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -14,12 +16,11 @@ public class CatTest {
     @Mock
     Feline feline;
 
-
     @Test
-    public void testGetSound(){
-            Cat cat = new Cat(feline);
-            String shouldSay = "Мяу";
-            assertEquals(shouldSay, cat.getSound() );
+    public void testGetSound() {
+        Cat cat = new Cat(feline);
+        String shouldSay = "Мяу";
+        assertEquals(shouldSay, cat.getSound());
     }
 
     @Test
@@ -29,7 +30,5 @@ public class CatTest {
         Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), cat.getFood());
 
     }
-
-
-    }
+}
 
